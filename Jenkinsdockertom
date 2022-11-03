@@ -4,7 +4,7 @@ pipeline{
         stage("build checkout")
         {
             steps{
-                git credentialsId: 'myweb', url: 'https://github.com/Malleswarao1/myweb.git'
+                git credentialsId: 'myweb', url: 'https://github.com/Malleswarao1/maven-web-app.git'
             }
         }
         stage("mvn through build"){
