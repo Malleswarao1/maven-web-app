@@ -18,8 +18,8 @@ pipeline{
                 sshagent(['tomcatdeploy']){
                     sh """
                     scp -o stricthostkeychecking=no target/myweb.war ubuntu@172.31.25.183:/home/ubuntu/apache-tomcat-9.0.68/webapps
-                    ssh ubuntu@/home/ubuntu/apache-tomcat-9.0.68/bin/shutdown.sh
-                    ssh ubuntu@//home/ubuntu/apache-tomcat-9.0.68/bin/startup.sh
+                    ssh ubuntu@172.31.25.183/home/ubuntu/apache-tomcat-9.0.68/bin/shutdown.sh
+                    ssh ubuntu@172.31.25.183//home/ubuntu/apache-tomcat-9.0.68/bin/startup.sh
                     """
                 }
             }
